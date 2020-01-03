@@ -27,7 +27,7 @@
     <vue-bootstrap-typeahead-list
       class="vbt-autcomplete-list"
       ref="list"
-      v-show="isFocused && data.length > 0"
+      v-show="isFocused"
       :query="inputValue"
       :data="formattedData"
       :background-variant="backgroundVariant"

@@ -1,6 +1,7 @@
 <template>
-  <div class="list-group shadow">
-    <vue-bootstrap-typeahead-list-item
+  <p v-if="matchedItems.length == 0 && minMatchingChars <= query.length">Pas de résultats</p>
+  <div class="list-group shadow" v-else>
+    <vue-bootstrap-typeahead-list-item      
       v-for="(item, id) in matchedItems" :key="id"
       :data="item.data"
       :html-text="highlight(item.text)"
